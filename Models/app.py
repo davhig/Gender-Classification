@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load the pre-trained model
-model = load_model('cnn_model.h5')  # Change 'your_model_path.h5' to the actual path of your saved Keras model
+model = load_model('cnn_model.h5')
 
 # Function to preprocess the uploaded image
 def preprocess_image(image):
@@ -19,7 +19,6 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=-1)  # Add channel dimension
     return image
 
-
 # Function to predict gender from the image
 def predict_gender(image):
     # Preprocess the image
@@ -31,8 +30,26 @@ def predict_gender(image):
 # Streamlit UI
 def main():
     st.title("Gender Classification App")
-    st.write("Upload an image and we will estimate the gender!")
+        
+    # Add an image to your Streamlit app
+    image = st.image('gender_classification.webp')
 
+    st.write("""
+    ## About
+    **Welcome to the Gender Classification App! This app allows you to classify whether the Gender is Male or Female**
+
+    The notebook, model and documentation are available on [GitHub.](https://github.com/dars180602/Gender-Classification/)        
+
+    **Contributors:** 
+    - **Cecille Jatulan**
+    - **David Higuera**
+    - **Diana Reyes**
+    - **Mike Montanez**
+    - **Maria Melencio**         
+    """)
+
+    st.write("Upload an image and we will estimate the gender!")
+    
     # File uploader
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
