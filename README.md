@@ -10,11 +10,11 @@ This project aims to develop a gender classification system using machine learni
 - Can be integrated into various applications such as security systems, demographic analysis tools, and more.
 
 ## Requirements
-- Python 3.x
+- Python
 - TensorFlow (for machine learning models)
 - NumPy
 - Matplotlib (for visualization)
-- Streamlit (for web application)
+- Streamlit and Render (for web application)
 
 ## Contributing
 Contributions are welcome! If you have any suggestions, bug reports, or want to contribute code, feel free to open an issue or submit a pull request.
